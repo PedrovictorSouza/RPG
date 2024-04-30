@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bidt6ot31g4mj"]
+
+[ext_resource type="Script" path="res://PlayerStates.gd" id="1_6u8u2"]
+[ext_resource type="Script" path="res://IdleState.gd" id="2_jph73"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xv5di"]
+
+[node name="Player" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_xv5di")
+
+[node name="PlayerStates" type="Node" parent="."]
+script = ExtResource("1_6u8u2")
+
+[node name="IdleState" type="Node" parent="PlayerStates"]
+script = ExtResource("2_jph73")
